@@ -119,13 +119,11 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
                 key={tag} 
                 style={{ 
                   padding: '0.5rem 1rem', 
-                  background: 'var(--bg-secondary)', 
-                  color: 'var(--accent)',
-                  border: '1px solid var(--glass-border)',
+                  background: 'var(--text-primary)', 
+                  color: 'white',
                   borderRadius: '4px', 
                   fontSize: '0.75rem', 
-                  fontWeight: 600,
-                  fontFamily: 'var(--font-heading)'
+                  fontWeight: 800 
                 }}
               >
                 {tag}

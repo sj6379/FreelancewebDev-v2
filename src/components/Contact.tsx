@@ -66,8 +66,8 @@ const Contact = () => {
                 wordBreak: 'break-all',
                 lineHeight: 1
               }}
-              className="focus-visible:ring-4 focus-visible:ring-accent outline-none rounded-lg"
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent)')}
+              className="focus-visible:ring-4 focus-visible:ring-accent-yellow outline-none rounded-lg"
+              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-yellow)')}
               onMouseLeave={(e) => (e.currentTarget.style.color = 'inherit')}
             >
               samueljacob637@gmail.com
@@ -105,7 +105,7 @@ const Contact = () => {
                 }}
                 whileHover={{ 
                   scale: 1.02, 
-                  backgroundColor: 'var(--accent)', 
+                  backgroundColor: 'var(--text-primary)', 
                   color: 'white',
                 }}
                 transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}

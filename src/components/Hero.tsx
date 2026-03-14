@@ -25,8 +25,7 @@ const Hero = () => {
         flexDirection: 'column', 
         justifyContent: 'center', 
         position: 'relative', 
-        overflow: 'hidden',
-        background: 'radial-gradient(circle at 50% 50%, var(--accent-glow), transparent 70%)'
+        overflow: 'hidden' 
       }}
     >
       {/* Parallax Watermark */}
@@ -44,7 +43,7 @@ const Hero = () => {
       <div className="grid-layout">
         <div style={{ gridColumn: '1 / -1', zIndex: 10 }}>
           <Reveal width="100%">
-            <h1 style={{ fontSize: 'clamp(3.5rem, 15vw, 18rem)', lineHeight: 0.8, color: 'var(--text-primary)' }}>
+            <h1 style={{ fontSize: 'clamp(3.5rem, 15vw, 18rem)', lineHeight: 0.8 }}>
               Freelance<br />WebDev
             </h1>
           </Reveal>
