@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 import { Home, Briefcase, Mail } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import Magnetic from './Magnetic';
@@ -40,6 +40,20 @@ const Navbar = () => {
       animate={{ y: 0, x: '-50%' }}
       transition={{ delay: 1, duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
     >
+      <motion.div 
+        className="scroll-progress"
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          height: '2px',
+          background: 'var(--accent)',
+          borderRadius: '999px',
+          transformOrigin: 'left',
+          scaleX: useScroll().scrollYProgress
+        }}
+      />
       <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
         {navItems.map((item) => (
           <Magnetic key={item.label}>
@@ -51,13 +65,13 @@ const Navbar = () => {
               }`}
               style={{ 
                 textDecoration: 'none', 
-                color: 'inherit',
                 padding: '0.75rem 1.25rem',
                 borderRadius: '999px',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '0.5rem',
-                backgroundColor: activeItem === item.href ? 'rgba(0,0,0,0.05)' : 'transparent'
+                backgroundColor: activeItem === item.href ? 'var(--accent)' : 'transparent',
+                color: activeItem === item.href ? 'white' : 'inherit'
               }}
             >
               <item.icon size={16} />

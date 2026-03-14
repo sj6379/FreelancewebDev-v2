@@ -37,14 +37,14 @@ const Hero = () => {
           y: y1,
         }}
       >
-        FWD-2026
+        FWD-26
       </motion.div>
 
       <div className="grid-layout">
         <div style={{ gridColumn: '1 / -1', zIndex: 10 }}>
           <Reveal width="100%">
-            <h1 style={{ fontSize: 'clamp(3.5rem, 15vw, 18rem)', lineHeight: 0.8 }}>
-              FREELANCE<br />WEB DEV
+            <h1 style={{ fontSize: 'clamp(3.5rem, 15vw, 18rem)', lineHeight: 0.8, color: 'var(--text-primary)' }}>
+              Freelance<br />WebDev
             </h1>
           </Reveal>
         </div>

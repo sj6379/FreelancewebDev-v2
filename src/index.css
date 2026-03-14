@@ -1,19 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;700;900&display=swap');
 
 :root {
-  --bg-primary: #f5f5f5;
-  --text-primary: #171717;
-  --text-secondary: #737373;
-  --accent-yellow: #facc15;
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(23, 23, 23, 0.1);
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #121212;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #8b5cf6;
+  --accent-glow: rgba(139, 92, 246, 0.3);
+  --glass-bg: rgba(18, 18, 18, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.08);
   --font-main: 'Inter', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
   --container-padding: 2rem;
 }
 
 @media (min-width: 1024px) {
   :root {
-    --container-padding: 6rem;
+    --container-padding: 8rem;
   }
 }
 
@@ -32,10 +35,11 @@ body {
 }
 
 h1, h2, h3, h4 {
+  font-family: var(--font-heading);
   text-transform: uppercase;
-  font-weight: 900;
-  line-height: 0.85;
-  letter-spacing: -0.04em;
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
 }
 
 /* Modern Brutalist Grid */
@@ -105,8 +109,8 @@ h1, h2, h3, h4 {
   inset: 0;
   z-index: 999;
   pointer-events: none;
-  opacity: 0.05;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3%3Ffilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 /* Custom Cursor */
@@ -147,32 +151,35 @@ body {
   position: absolute;
   font-size: 25vw;
   font-weight: 900;
-  color: rgba(23, 23, 23, 0.03);
+  color: rgba(255, 255, 255, 0.02);
   white-space: nowrap;
   pointer-events: none;
   z-index: -1;
   text-transform: uppercase;
   line-height: 1;
+  font-family: var(--font-heading);
 }
 
 /* Button Refinement */
 .brutalist-button {
-  background: var(--text-primary);
+  background: var(--accent);
   color: white;
-  padding: 1.25rem 2.5rem;
-  border: 1px solid var(--text-primary);
-  font-weight: 800;
+  padding: 1rem 2rem;
+  border: 1px solid var(--accent);
+  font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   display: inline-flex;
   align-items: center;
   gap: 1rem;
+  border-radius: 4px;
+  font-family: var(--font-heading);
 }
 
 .brutalist-button:hover {
   background: transparent;
-  color: var(--text-primary);
+  box-shadow: 0 0 20px var(--accent-glow);
 }
 
 /* Custom Scrollbar */

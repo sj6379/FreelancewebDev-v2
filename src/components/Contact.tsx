@@ -66,8 +66,8 @@ const Contact = () => {
                 wordBreak: 'break-all',
                 lineHeight: 1
               }}
-              className="focus-visible:ring-4 focus-visible:ring-accent-yellow outline-none rounded-lg"
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-yellow)')}
+              className="focus-visible:ring-4 focus-visible:ring-accent outline-none rounded-lg"
+              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent)')}
               onMouseLeave={(e) => (e.currentTarget.style.color = 'inherit')}
             >
               samueljacob637@gmail.com
@@ -105,7 +105,7 @@ const Contact = () => {
                 }}
                 whileHover={{ 
                   scale: 1.02, 
-                  backgroundColor: 'var(--text-primary)', 
+                  backgroundColor: 'var(--accent)', 
                   color: 'white',
                 }}
                 transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
@@ -134,7 +134,7 @@ const Contact = () => {
           }}
           className="md:flex-row md:justify-between"
         >
-          <div>© 2026 FREELANCE WEB DEV. ALL RIGHTS RESERVED.</div>
+          <div>© 2026 FreelanceWebDev. ALL RIGHTS RESERVED.</div>
           <div className="md:text-right">India Based / Remote</div>
         </div>
       </div>
