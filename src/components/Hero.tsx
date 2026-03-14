@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { Reveal } from './Reveal';
 import Magnetic from './Magnetic';
 import { ArrowDown } from 'lucide-react';
+import { FreelanceLogo } from './Logo';
 
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -43,9 +44,12 @@ const Hero = () => {
       <div className="grid-layout">
         <div style={{ gridColumn: '1 / -1', zIndex: 10 }}>
           <Reveal width="100%">
-            <h1 style={{ fontSize: 'clamp(3.5rem, 15vw, 18rem)', lineHeight: 0.8 }}>
-              Freelance<br />WebDev
-            </h1>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+              <FreelanceLogo size={120} className="hidden md:block" />
+              <h1 style={{ fontSize: 'clamp(3.5rem, 15vw, 18rem)', lineHeight: 0.8 }}>
+                Freelance<br />WebDev
+              </h1>
+            </div>
           </Reveal>
         </div>
       </div>
