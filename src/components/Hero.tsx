@@ -25,7 +25,8 @@ const Hero = () => {
         flexDirection: 'column', 
         justifyContent: 'center', 
         position: 'relative', 
-        overflow: 'hidden' 
+        overflow: 'hidden',
+        background: 'radial-gradient(circle at 50% 50%, var(--accent-glow), transparent 70%)'
       }}
     >
       {/* Parallax Watermark */}
